@@ -31,7 +31,7 @@ export class HomeComponent extends Observable implements BeaconCallback {
             androidAuthorisationDescription: "Location permission needed"
         };
         this.nativescriptIbeacon = new NativescriptIbeacon(this, options);
-        this.region = new BeaconRegion("HelloID", "2f234454-cf6d-4a0f-adf2-f4911ba9ffa6");
+        this.region = new BeaconRegion("HelloID", "B9407F30-F5F8-466E-AFF9-25556B57FE6D");
     }
 
     start() {
