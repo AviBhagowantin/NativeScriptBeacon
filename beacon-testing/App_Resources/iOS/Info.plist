@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>My description explaining why I need it</string>
+	<string>To track your location inside a building.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>My description explaining why I need it</string>
+	<string>To track your location inside a building.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

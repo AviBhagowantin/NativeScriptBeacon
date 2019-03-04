@@ -7,6 +7,7 @@ import {
     BeaconLocationOptions, BeaconLocationOptionsIOSAuthType, BeaconLocationOptionsAndroidAuthType
 } from "nativescript-ibeacon/nativescript-ibeacon.common";
 import {NativescriptIbeacon} from "nativescript-ibeacon";
+import { ComponentFactoryResolver } from "@angular/core/src/render3";
 
 @Component({
     selector: "Home",
@@ -31,7 +32,7 @@ export class HomeComponent extends Observable implements BeaconCallback {
             androidAuthorisationDescription: "Location permission needed"
         };
         this.nativescriptIbeacon = new NativescriptIbeacon(this, options);
-        this.region = new BeaconRegion("HelloID", "B9407F30-F5F8-466E-AFF9-25556B57FE6D");
+        this.region = new BeaconRegion("Blanc", "B9407F30-F5F8-466E-AFF9-25556B57FE6D");
     }
 
     start() {
@@ -71,6 +72,8 @@ export class HomeComponent extends Observable implements BeaconCallback {
         this.message = "didRangeBeaconsInRegion: " + (new Date().toDateString());
         for (let beacon of beacons) {
             console.log("B: " + beacon.proximityUUID + " - " + beacon.major + " - " + beacon.minor + " - " + beacon.distance_proximity + " - " + beacon.rssi + " - " + beacon.txPower_accuracy );
+            var d=Math.pow(10,((beacon.txPower_accuracy- beacon.rssi)/20));
+            console.log("Distance: "+d);
         }
     }
 
